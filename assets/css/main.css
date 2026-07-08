@@ -232,10 +232,10 @@ h3,
 h4,
 h5,
 h6 {
-    color: #000;
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: "helvetica-neue-condensed", sans-serif;
+    color: #134060;
+    font-weight: 600;
+    line-height: 1.05;
+    font-family: "Acumin Pro Condensed",sans-serif;
 }
 
 h1 {
@@ -275,14 +275,19 @@ h6 {
     text-transform: uppercase;
     border-radius: 100px;
     background: #E31827;
-    padding: 8px 15px;
+    padding: 11.3px 37px;
+    border: 1px solid transparent;
     transition: all 0.3s linear;
+}
+.us-btn-1:hover{
+    border-color: #E31827;
+    background-color: #fff;
+    color: #E31827;
 }
 /* button */
 
 
 /* header section start */
-
 .header-area::before{
     content: "";
     position: absolute;
@@ -301,7 +306,7 @@ h6 {
     min-width: 305px;
 }
 .header-logo img {
-    max-width: 163px;
+    max-width: clamp(120px, 18vw, 163px);
 }
 .search-area .search-input {
     border-radius: 100px;
@@ -344,23 +349,24 @@ h6 {
 .header-top-element-info ul li a {
     display: inline-block;
     color: #DBDBDB;
-    font-family: "Acumin Pro Condensed",sans-serif;
-    font-size: 16px;
+    font-family: "Acumin Pro Condensed", sans-serif;
+    font-size: clamp(13px, 1.6vw, 16px);
     font-weight: 600;
     line-height: 1.5;
-    letter-spacing: 0.8px;
+    letter-spacing: clamp(0.3px, 0.08vw, 0.8px);
     transition: all 0.3s linear;
 }
-.main-menu-wrapper ul li a{
+.main-menu-wrapper ul li a {
     display: inline-block;
     color: #FFF;
-    font-family: "Acumin Pro",sans-serif;
-    font-size: 17px;
+    font-family: "Acumin Pro", sans-serif;
+    font-size: clamp(14px, 1.8vw, 17px);
     font-weight: 500;
-    line-height:1.5; 
-    letter-spacing: 0.85px;
+    line-height: 1.5;
+    letter-spacing: clamp(0.4px, 0.1vw, 0.85px);
     transition: all 0.3s linear;
 }
+
 .main-menu-wrapper ul li {
     margin-right: 50px;
     padding: 10px 0;
@@ -373,17 +379,18 @@ h6 {
     color: #E31827;
 }
 .header-top-element-info .us-btn-1 {
-    border-radius: 45px;
+    border-radius: clamp(30px, 5vw, 45px);
     border: 1px solid #FFA2A4;
     background-color: #E31827;
     color: #FFF;
-    letter-spacing: 1.92px;
+    letter-spacing: clamp(0.8px, 0.2vw, 1.92px);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.48);
     font-family: "Acumin Pro Condensed";
     font-weight: 600;
-    font-size: 16px;
-    padding: 5.5px 20px;
+    font-size: clamp(13px, 1.6vw, 16px);
+    padding: clamp(4px, 1vw, 5.5px) clamp(14px, 2vw, 20px);
 }
+
 .header-top-element-info .us-btn-1:hover{
     background-color: #fff;
     color: #E31827;
@@ -398,13 +405,14 @@ h6 {
 .header-top-element-info>ul>li:first-child {
     padding: 18px 20px;
 }
-.header-top-element-info>ul>li {
-    padding: 0 20px;
+.header-top-element-info > ul > li {
+    padding: 0 clamp(10px, 3vw, 20px);
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1;
 }
+
 .header-top-element-info>ul>li::before {
     content: "";
     position: absolute;
@@ -437,3 +445,35 @@ h6 {
 /* header section end */
 
 
+/* banner section start */
+.video-item {
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+}
+.us-banner-area {
+    padding: 219px 0 36px;
+}
+.us-banner-area  .container {
+    max-width: 1420px;
+}
+.us-banner-content p {
+    color: #F4F4F4;
+    line-height: 1.4;
+}
+.us-banner-content {
+    max-width: 588px;
+}
+.us-banner-content::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    height: 100%;
+    width: calc(100% + 5000px);
+    background: rgba(35, 35, 35, 0.86);
+    z-index: -1;
+    transform: translateX(-50%);
+    margin-left: -1849px;
+}
+/* banner section end */
