@@ -1,0 +1,439 @@
+/*
+  The Name:Georgia Mechanical
+  Author: 
+  Support: 
+  Description: Georgia Mechanical
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1.default css
+-----------------------------------
+*/
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('../fonts/AcuminPro-Regular.eot');
+    src: url('../fonts/AcuminPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-Regular.woff2') format('woff2'),
+        url('../fonts/AcuminPro-Regular.woff') format('woff'),
+        url('../fonts/AcuminPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('../fonts/AcuminPro-Medium.eot');
+    src: url('../fonts/AcuminPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-Medium.woff2') format('woff2'),
+        url('../fonts/AcuminPro-Medium.woff') format('woff'),
+        url('../fonts/AcuminPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('../fonts/AcuminPro-Bold.eot');
+    src: url('../fonts/AcuminPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-Bold.woff2') format('woff2'),
+        url('../fonts/AcuminPro-Bold.woff') format('woff'),
+        url('../fonts/AcuminPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro Condensed';
+    src: url('../fonts/AcuminProCond-Medium.eot');
+    src: url('../fonts/AcuminProCond-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminProCond-Medium.woff2') format('woff2'),
+        url('../fonts/AcuminProCond-Medium.woff') format('woff'),
+        url('../fonts/AcuminProCond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro Condensed';
+    src: url('../fonts/AcuminProCond-Regular.eot');
+    src: url('../fonts/AcuminProCond-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminProCond-Regular.woff2') format('woff2'),
+        url('../fonts/AcuminProCond-Regular.woff') format('woff'),
+        url('../fonts/AcuminProCond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro Condensed';
+    src: url('../fonts/AcuminProCond-Bold.eot');
+    src: url('../fonts/AcuminProCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminProCond-Bold.woff2') format('woff2'),
+        url('../fonts/AcuminProCond-Bold.woff') format('woff'),
+        url('../fonts/AcuminProCond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.tk-Acumin-pro{
+    font-family: "Acumin Pro", sans-serif;
+}
+.tk-Acumin-condensed{
+    font-family: "Acumin Pro Condensed",sans-serif;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "Acumin Pro", sans-serif;
+    color: #000;
+}
+
+/* lenis */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* lenis */
+
+/* scroll bar */
+.os-scrollbar-handle {
+    background: #C1132A;
+}
+body>.os-scrollbar {
+    z-index: 999;
+}
+/* scroll bar */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* animation */
+.animation-line{
+    overflow: hidden;
+}
+/* animation */
+
+/* paralax img */
+.trigger-parallax {
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-img {
+    height: calc(100% + 120px);
+    width: 100%;
+    object-fit: cover;
+    transform: translateY(0);
+}
+
+/* paralax img */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-fix {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* container */
+.container {
+    max-width: 1424px;
+}
+/* z-index */
+.z-4 {
+    z-index: 4 !important;
+}
+
+/* z-index */
+
+/* input */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="password"], 
+input[type="url"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #000;
+    color: #DBDBDB;
+    font-family: "Acumin Pro",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 1;
+}
+textarea{
+	height: 116px;
+}
+input:focus , textarea:focus{
+	outline: none;
+	box-shadow: none;
+}
+::placeholder {
+    color: #DBDBDB;
+    font-family: "Acumin Pro",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+/* input */
+
+
+
+.animation-line p:last-child,
+.mb-p p:last-child{
+    margin-bottom: 0;
+}
+
+/* heading  style*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "helvetica-neue-condensed", sans-serif;
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 56px);
+}
+
+h2 {
+    font-size: clamp(32px, 4.5vw, 50px);
+}
+
+h3 {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+h4 {
+    font-size: clamp(26px, 3.5vw, 36px);
+}
+
+h5 {
+    font-size: clamp(20px, 2.8vw, 24px);
+}
+
+h6 {
+    font-size: clamp(18px, 2.5vw, 20px);
+}
+
+
+/* button */
+.us-btn-1 {
+    display: inline-block;
+    color: #FFF;
+    font-family: "Acumin Pro", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.36px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background: #E31827;
+    padding: 8px 15px;
+    transition: all 0.3s linear;
+}
+/* button */
+
+
+/* header section start */
+
+.header-area::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.87;
+    background: linear-gradient(180deg, #081A2D 0%, #06121F 100%);
+}
+.header-area .container {
+    max-width: 1424px;
+}
+.header-logo {
+    min-width: 305px;
+}
+.header-logo img {
+    max-width: 163px;
+}
+.search-area .search-input {
+    border-radius: 100px;
+    border: 1px solid #C4C4C4;
+    background: #000;
+    padding: 4px clamp(10px, 4vw , 34px);
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    margin-top: -2px;
+    z-index: 1;
+}
+.main-menu-area {
+    border-left: 1px solid #636363;
+}
+.main-menu-area::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: calc(100% + 5000px);
+    background: linear-gradient(180deg, #081A2D 0%, #06121F 100%);
+    z-index: 1;
+}
+.main-menu-wrapper ul ,
+.header-top-element-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-menu-wrapper ul li ,
+.header-top-element-info ul li{
+    display: inline-block;
+}
+
+.header-top-element-info ul li a {
+    display: inline-block;
+    color: #DBDBDB;
+    font-family: "Acumin Pro Condensed",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    transition: all 0.3s linear;
+}
+.main-menu-wrapper ul li a{
+    display: inline-block;
+    color: #FFF;
+    font-family: "Acumin Pro",sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height:1.5; 
+    letter-spacing: 0.85px;
+    transition: all 0.3s linear;
+}
+.main-menu-wrapper ul li {
+    margin-right: 50px;
+    padding: 10px 0;
+}
+.main-menu-wrapper ul li:last-child{
+    margin-right: 0;
+}
+.header-top-element-info ul li a:hover,
+.main-menu-wrapper ul li a:hover{
+    color: #E31827;
+}
+.header-top-element-info .us-btn-1 {
+    border-radius: 45px;
+    border: 1px solid #FFA2A4;
+    background-color: #E31827;
+    color: #FFF;
+    letter-spacing: 1.92px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.48);
+    font-family: "Acumin Pro Condensed";
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5.5px 20px;
+}
+.header-top-element-info .us-btn-1:hover{
+    background-color: #fff;
+    color: #E31827;
+}
+
+.header-top-element-wrapper>div {
+    flex: 1 0 auto;
+}
+.search-area {
+    max-width: 324px;
+}
+.header-top-element-info>ul>li:first-child {
+    padding: 18px 20px;
+}
+.header-top-element-info>ul>li {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.header-top-element-info>ul>li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #636363;
+}
+.header-top-element-info ul{
+    display: flex;
+}
+.header-top-element-info>ul>li:last-child:before{
+    display: none;
+}
+.header-top-element::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #636363;
+    height: 1px;
+    width: calc(100% + 5000px);
+    z-index: 1;
+}
+.header-bottom-element ,
+.header-top-element {
+    padding-left: 66px;
+}
+/* header section end */
+
+
