@@ -144,6 +144,88 @@
         // });
 
 
+function titleAnimation() {
+    if (window.titleTl) {
+        window.titleTl.scrollTrigger.kill();
+        window.titleTl.kill();
+    }
+
+    window.titleTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".product-catalog-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+            invalidateOnRefresh: true
+            // markers: true
+        }
+    });
+
+    let tl = window.titleTl;
+
+    // LEFT
+    tl.to(".title-stripe-wrapper.left-side .stripe-one", {
+        x: -20,
+        opacity: 0.5,
+        duration: 0.8
+    }, 0)
+
+    .to(".title-stripe-wrapper.left-side .stripe-two", {
+        x: -12,
+        opacity: 0.75,
+        duration: 0.8
+    }, 0)
+
+    .to(".title-stripe-wrapper.left-side .stripe-three", {
+        x: -6,
+        opacity: 0.9,
+        duration: 0.8
+    }, 0)
+
+    // RIGHT
+    .to(".title-stripe-wrapper.right-side .stripe-one", {
+        x: 20,
+        opacity: 0.5,
+        duration: 0.8
+    }, 0)
+
+    .to(".title-stripe-wrapper.right-side .stripe-two", {
+        x: 12,
+        opacity: 0.75,
+        duration: 0.8
+    }, 0)
+
+    .to(".title-stripe-wrapper.right-side .stripe-three", {
+        x: 6,
+        opacity: 0.9,
+        duration: 0.8
+    }, 0)
+
+    // EDGE
+    .to(".edge-outline-line-1", {
+        x: 30,
+        duration: 0.8
+    }, 0)
+
+    .to(".edge-outline-line-2", {
+        x: -30,
+        duration: 0.8
+    }, 0);
+}
+
+window.addEventListener("load", titleAnimation);
+
+let resizeTimer2;
+
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer2);
+
+    resizeTimer2 = setTimeout(() => {
+        titleAnimation();
+        ScrollTrigger.refresh();
+    }, 200);
+});
+
+
 
         // OverlayScrollbars
         const {
