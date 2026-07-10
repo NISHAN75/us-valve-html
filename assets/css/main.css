@@ -1340,6 +1340,9 @@ h6 {
 /* resource-banner section end */
 
 /* placement section start */
+.placement-area {
+    padding-top: 50px;
+}
 .placement-search-area  input[type="search"] {
     border-radius: 100px;
     border: 1px solid #B8B8B8;
@@ -1390,9 +1393,10 @@ h6 {
 }
 .placement-card {
     border-right: 2px solid #E31827;
-    padding: 60px 58px;
+    padding: clamp(24px, 4vw, 50px) clamp(20px, 4vw, 58px) clamp(24px, 4vw, 70px);
     height: 100%;
 }
+
 .placement-card p {
     color: #134060;
     line-height: 1.2;
@@ -1425,5 +1429,82 @@ h6 {
     max-width: 825px;
     margin-bottom: 44px;
 }
+.placement-line {
+    background: linear-gradient(90deg, rgba(19, 64, 96, 0.10) 0%, rgba(19, 64, 96, 0.20) 100%);
+    display: inline-block;
+    height: 18px;
+    width: calc(100% + 5000px);
+    position: absolute;
+    opacity: 1;
+    bottom: 19px;
+}
+.placement-line-wrapper.left-side .placement-line{
+    left: 50%;
+    transform: translateX(-50%) skewX(26deg);
+    margin-left: -3936px;
+}
+.placement-line-wrapper.right-side .placement-line:nth-child(2),
+.placement-line-wrapper.left-side .placement-line:nth-child(2){
+    bottom: 56px;
+}
+.placement-line-wrapper.left-side .placement-line:nth-child(2){
+    margin-left: -3962px;
+}
+.placement-line-wrapper.right-side .placement-line:nth-child(3),
+.placement-line-wrapper.left-side .placement-line:nth-child(3){
+    bottom: 93px;
+}
+.placement-line-wrapper.left-side .placement-line:nth-child(3){
+    margin-left: -3988px;
+}
+.placement-line-wrapper.right-side .placement-line{
+    right: 50%;
+    transform: translateX(50%) skewX(-26deg);
+    margin-right: -3936px;
+}
+.placement-line-wrapper.right-side .placement-line:nth-child(2){
+    margin-right: -3962px;
+}
+.placement-line-wrapper.right-side .placement-line:nth-child(3){
+    margin-right: -3988px;
+}
+
 /* placement section end */
 
+/* footer section start */
+.footer-area {
+    background: linear-gradient(180deg, #081A2D 0%, #010A14 100%);
+    border-top: 4px solid #E03643;
+    padding: 50px 0 10px;
+}
+.footer-logo img {
+    max-width: 203px;
+}
+.footer-shape {
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    width: calc(100% - 243px);
+    right: 0;
+}
+
+.footer-title {
+    color: #FF2737;
+    font-family: "Acumin Pro Condensed" , sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 1.6px;
+    margin: 0;
+    padding-bottom: 12px;
+}
+.footer-title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1B6EA8;
+}
+/* footer section end */

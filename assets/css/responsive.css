@@ -244,6 +244,37 @@
         margin-top: 10px;
     }
     /* process section end */
+
+    /* placement section start */
+    .placement-card {
+        border-right: 0;
+        padding: 0;
+    }
+    .placement-card::before{
+        display: none;
+    }
+    .placement-area .section-title-wrapper {
+        margin-bottom: 36px;
+        border-bottom: 1px solid #E03643;
+        padding-bottom: 33px;
+    }
+    .placement-card p {
+        min-height: auto;
+    }
+    .placement-search-area {
+        margin-top: 22px;
+    }
+    .placement-card .us-btn-1 {
+        margin-top: 5px;
+        padding: 11.3px 32px;
+    }
+    .placement-card-wrapper .row {
+        --bs-gutter-y: 40px;
+    }
+    .placement-area {
+        padding: 50px 0 60px;
+    }
+    /* placement section end */
 }
 
 /* max-width 767 */
