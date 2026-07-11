@@ -87,7 +87,7 @@
 
 
 		<!-- header section start -->
-		<header class="header-area overflow-hidden position-relative z-2">
+		<header class="header-area overflow-hidden">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col col-auto">
@@ -173,19 +173,22 @@
 		</header>
 		<!-- header section end -->
 
+		<!-- header fix -->
+		<div class="header-fix"></div>
+		<!-- header fix -->
+
 
 		<!-- main section start -->
 		<main>
 			<!-- banner section start -->
 			<section class="us-banner-area position-relative z-3">
 				<video class="video-item" poster="https://gaststg.wpenginepowered.com/wp-content/uploads/2025/03/Hero-bg-scaled.jpg" src="assets/video/banner-video.mp4" playsinline loop autoplay muted></video>
-
-				<div class="line-wrapper d-none d-lg-block">
-					<span class="line line-one"></span>
-					<span class="line line-two"></span>
-					<span class="line line-three"></span>
-				</div>
 				<div class="container position-relative z-3">
+					<div class="line-wrapper d-none d-lg-block">
+						<span class="line line-one"></span>
+						<span class="line line-two"></span>
+						<span class="line line-three"></span>
+					</div>
 					<div class="us-banner-content position-relative z-3">
 						<span class="us-banner-content-line"></span>
 						<h1 class="text-white mb-2 mb-lg-3">Ball Valves and Check Valves Built to Your Specifications</h1>
@@ -514,7 +517,9 @@
 							<div class="col-md-6 col-lg-3">
 								<div class="product-catalog-card">
 									<div class="product-catalog-card-img-wrapper position-relative z-2">
-										<img src="assets/images/product/product-01.png" alt="..." class="d-block mx-auto">
+										<div class="product-catalog-card-img-info">
+											<img src="assets/images/product/product-01.png" alt="..." class="d-block mx-auto">
+										</div>
 										<div class="product-img-shadow-wrapper position-relative z-2">
 											<span class="product-img-shadow product-img-shadow-1 d-block mx-auto rounded-circle"></span>
 											<span class="product-img-shadow product-img-shadow-2 d-block mx-auto rounded-circle"></span>
@@ -530,7 +535,9 @@
 							<div class="col-md-6 col-lg-3">
 								<div class="product-catalog-card">
 									<div class="product-catalog-card-img-wrapper position-relative z-2">
-										<img src="assets/images/product/product-02.png" alt="..." class="d-block mx-auto">
+										<div class="product-catalog-card-img-info">
+											<img src="assets/images/product/product-02.png" alt="..." class="d-block mx-auto">
+										</div>
 										<div class="product-img-shadow-wrapper position-relative z-2">
 											<span class="product-img-shadow product-img-shadow-1 d-block mx-auto rounded-circle"></span>
 											<span class="product-img-shadow product-img-shadow-2 d-block mx-auto rounded-circle"></span>
@@ -546,7 +553,9 @@
 							<div class="col-md-6 col-lg-3">
 								<div class="product-catalog-card">
 									<div class="product-catalog-card-img-wrapper position-relative z-2">
-										<img src="assets/images/product/product-02.png" alt="..." class="d-block mx-auto">
+										<div class="product-catalog-card-img-info">
+											<img src="assets/images/product/product-02.png" alt="..." class="d-block mx-auto">
+										</div>
 										<div class="product-img-shadow-wrapper position-relative z-2">
 											<span class="product-img-shadow product-img-shadow-1 d-block mx-auto rounded-circle"></span>
 											<span class="product-img-shadow product-img-shadow-2 d-block mx-auto rounded-circle"></span>
@@ -563,7 +572,9 @@
 							<div class="col-md-6 col-lg-3">
 								<div class="product-catalog-card">
 									<div class="product-catalog-card-img-wrapper position-relative z-2">
-										<img src="assets/images/product/product-03.png" alt="..." class="d-block mx-auto">
+										<div class="product-catalog-card-img-info">
+											<img src="assets/images/product/product-03.png" alt="..." class="d-block mx-auto">
+										</div>
 										<div class="product-img-shadow-wrapper position-relative z-2">
 											<span class="product-img-shadow product-img-shadow-1 d-block mx-auto rounded-circle"></span>
 											<span class="product-img-shadow product-img-shadow-2 d-block mx-auto rounded-circle"></span>
@@ -592,8 +603,10 @@
 							</div>
 						</div>
 						<div class="col">
-							<div class="spec-quote-img-wrapper">
-								<img src="assets/images/spec/spec-img.jpg" alt="...">
+							<div class="spec-quote-img-wrapper position-relative z-3">
+								<span class="spec-quote-line"></span>
+								<span class="spec-quote-line"></span>
+								<img src="assets/images/spec/spec-img.png" alt="...">
 							</div>
 						</div>
 					</div>
@@ -775,14 +788,16 @@
 		<!-- main section end -->
 		<!-- footer section start -->
 		<footer class="footer-area position-relative z-3 overflow-hidden">
-			<img src="assets/images/footer/footer-shape.png" alt="..." class="footer-shape">
-			<div class="container">
+			
+			<div class="container position-relative z-3">
+				<img src="assets/images/footer/footer-shape.png" alt="..." class="footer-shape d-none d-md-block">
+				<img src="assets/images/footer/footer-shape-02.svg" alt="..." class="footer-shape-2 d-block d-md-none">
 				<a href="#" class="d-block footer-logo">
 					<img src="assets/images/footer/footer-logo.svg" alt="...">
 				</a>
 				<div class="footer-top-area">
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col col-auto">
 							<div class="footer-menu-area">
 								<h6 class="footer-title position-relative z-3 text-uppercase">Locations</h6>
 								<div class="footer-item mb-p">
@@ -803,16 +818,16 @@
 										<span class="contact-link">1-410-789-0999</span>
 									</a>
 									<a href="#" class="contact-link-info">
-										<span class="contact-title">Ph:</span>
+										<span class="contact-title">Fx:</span>
 										<span class="contact-link">1-410-789-0999</span>
 									</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col col-auto">
 							<div class="footer-menu-area">
 								<h6 class="footer-title position-relative z-3 text-uppercase">Socials</h6>
-								<div class="social-link-wrapper">
+								<div class="social-link-wrapper d-flex align-items-center gap-3 gap-lg-4">
 									<a href="#" class="social-link">
 										<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.88921 0H31.1137C33.2617 0 35.0029 1.74126 35.0029 3.88921V31.1137C35.0029 33.2617 33.2617 35.0029 31.1137 35.0029H3.88921C1.74126 35.0029 0 33.2617 0 31.1137V3.88921C0 1.74126 1.74126 0 3.88921 0ZM9.72303 29.1691C10.26 29.1691 10.6953 28.7337 10.6953 28.1968V14.5845C10.6953 14.0476 10.26 13.6122 9.72303 13.6122H6.80612C6.26914 13.6122 5.83382 14.0476 5.83382 14.5845V28.1968C5.83382 28.7337 6.26914 29.1691 6.80612 29.1691H9.72303ZM8.26458 11.6676C6.65361 11.6676 5.34767 10.3617 5.34767 8.75073C5.34767 7.13976 6.65361 5.83382 8.26458 5.83382C9.87555 5.83382 11.1815 7.13976 11.1815 8.75073C11.1815 10.3617 9.87555 11.6676 8.26458 11.6676ZM28.1968 29.1691C28.7337 29.1691 29.1691 28.7337 29.1691 28.1968V19.2516C29.2323 16.1612 26.9476 13.5238 23.8798 13.1455C21.7349 12.9496 19.6567 13.9514 18.4738 15.7513V14.5845C18.4738 14.0476 18.0384 13.6122 17.5015 13.6122H14.5845C14.0476 13.6122 13.6122 14.0476 13.6122 14.5845V28.1968C13.6122 28.7337 14.0476 29.1691 14.5845 29.1691H17.5015C18.0384 29.1691 18.4738 28.7337 18.4738 28.1968V20.9045C18.4738 19.2936 19.7798 17.9876 21.3907 17.9876C23.0016 17.9876 24.3076 19.2936 24.3076 20.9045V28.1968C24.3076 28.7337 24.743 29.1691 25.2799 29.1691H28.1968Z" fill="#228AD3"/>
@@ -827,10 +842,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col d-none d-lg-block">
 							<div class="footer-menu-area">
 								<h6 class="footer-title position-relative z-3 text-uppercase">Helpful Links</h6>
-								<div class="footer-inner-menu-wrapper">
+								<div class="footer-inner-menu-wrapper d-flex">
 									<div class="footer-inner-menu">
 										<ul>
 											<li>
@@ -871,6 +886,19 @@
 										</ul>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom-area">
+					<div class="row">
+						<div class="col d-none d-lg-block">
+							<p class="copy-right-text mb-0">&COPY; 2026 US Valve Corporation. All rights reserved.</p>
+						</div>
+						<div class="col">
+							<div class="other-link-wrapper d-flex align-items-center justify-content-center justify-content-lg-end gap-3 gap-lg-4">
+								<a href="#">Privacy Policy</a>
+								<a href="https://www.m8th.com/">Designed by Mighty 8th</a>
 							</div>
 						</div>
 					</div>

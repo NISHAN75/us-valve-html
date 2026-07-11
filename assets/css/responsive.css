@@ -1,21 +1,44 @@
-/* 1400, 1199, 991, 767, 575, 480, 360, 320 */
-/* CSS Index
------------------------------------
-1.default css
------------------------------------
+/*
+  The Name: Us Valve
+  File: responsive.css
+  Description: Responsive breakpoint overrides for main.css
 */
 
-/* min-width 1500 */
+/* ==================================================================
+   BREAKPOINT INDEX
+   ------------------------------------------------------------------
+   1600px  - min-width 1500 (reserved, currently empty)
+   1500px  - min-width 1500 (reserved, currently empty)
+   1399px  - Large desktop / small laptop adjustments
+   1199px  - Tablet landscape / small laptop adjustments
+   991px   - Tablet portrait adjustments
+   767px   - Mobile landscape adjustments
+   575px   - Mobile portrait adjustments
+   479px   - Small mobile adjustments
+   383px   - Extra small mobile adjustments
+   360px   - Smallest supported mobile adjustments
+   ================================================================== */
+
+/* ==================================================================
+   MAX-WIDTH: 1600px (reserved)
+   ================================================================== */
 @media (max-width: 1600px) {
 
     
 }
-/* min-width 1500 */
+
+/* ==================================================================
+   MAX-WIDTH: 1500px (reserved)
+   ================================================================== */
 @media (max-width: 1500px) {
    
 }
 
-/* max-width 1399 */
+/* ==================================================================
+   MAX-WIDTH: 1399.98px
+   Large desktop / small laptop: tighten resource banner width,
+   footer menu column, and industry-solutions card padding.
+   ================================================================== */
 @media (max-width: 1399.98px) {
 
     /* resource-banner section start */
@@ -24,9 +47,29 @@
     }
     /* resource-banner section end */
 
+    /* footer section start */
+    .footer-top-area .col:nth-child(1) .footer-menu-area {
+        min-width: 100%;
+    }
+    /* footer section end */
+
+    /* industry-solutions section start */
+    .industry-solutions-card-content {
+        padding: 13px 135px 20px 20px;
+    }
+    .industry-solutions-card-content h6 {
+        font-size: 30px;
+    }
+    /* industry-solutions section end */
+
 }
 
-/* max-width 1199 */
+/* ==================================================================
+   MAX-WIDTH: 1199.98px
+   Tablet landscape: container gutters, header nav font-size,
+   value-props stacking, video promo / spec quote widths,
+   product-catalog stripe offsets, resource banner and footer widths.
+   ================================================================== */
 @media (max-width: 1199.98px) {
     .container{
         padding-right: 20px;
@@ -35,6 +78,11 @@
     /* header section start */
     .us-banner-content-line {
         width: calc(100% + 150px);
+    }
+    .offcanvas-bottom-btn ul li a, 
+    .header-top-element-info ul li a,
+    .main-menu-wrapper ul li a{
+        font-size: 15px;
     }
     /* header section end */
 
@@ -60,6 +108,9 @@
     /* video-promo- section start */
     .video-promo-title {
         max-width: 400px;
+    }
+    .spec-quote-content {
+        max-width: 450px;
     }
     /* video-promo- section end */
 
@@ -101,9 +152,23 @@
 
 
 
+    /* footer section start */
+    .footer-menu-area {
+        min-width: 100%;
+    }
+    /* footer section end */
+
+
+
 }
 
-/* max-width 991 */
+/* ==================================================================
+   MAX-WIDTH: 991.98px
+   Tablet portrait: header simplifies to non-fixed padding, banner
+   content goes full-width, metrics ribbon stacks, video/spec-quote
+   sections stack, product-catalog title bleeds edge-to-edge,
+   placement cards drop their dividers.
+   ================================================================== */
 @media (max-width: 991.98px) {
 
     /* header section start */
@@ -158,6 +223,10 @@
     .metrics-ribbon-area .row {
         --bs-gutter-y: 50px;
     }
+    .spec-quote-section  .col,
+    .spec-quote-section  .col-auto,
+    .footer-top-area .col-auto,
+    .footer-top-area .col,
     .resource-banner-area .col,
     .resource-banner-area .col-auto
     .video-promo-section .col-auto,
@@ -193,6 +262,8 @@
     .video-promo-section {
         padding: 40px 0 49px;
     }
+    .placement-area .section-title-wrapper ,
+    .spec-quote-content ,
     .video-promo-wrapper ,
     .video-promo-title{
         max-width: 100%;
@@ -274,10 +345,21 @@
     .placement-area {
         padding: 50px 0 60px;
     }
+    .industry-solutions-area {
+        padding: 60px 0 100px;
+    }
+    .spec-quote-img-wrapper{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
     /* placement section end */
 }
 
-/* max-width 767 */
+/* ==================================================================
+   MAX-WIDTH: 767.98px
+   Mobile landscape: value-props padding tightened, spec-quote
+   decorative lines repositioned in viewport units.
+   ================================================================== */
 @media (max-width: 767.98px) {
     /* value-props section start */
     .value-props-area {
@@ -287,9 +369,24 @@
         padding-left: 0;
     }
     /* value-props section end */
+
+    /* placement section start */
+    .spec-quote-line{
+        bottom: 4vw;
+        left: 15vw;
+    }
+    .spec-quote-line:nth-child(1) {
+        right: 15vw;
+        top: 4vw;
+    }
+    /* placement section end */
 }
 
-/* max-width 575 */
+/* ==================================================================
+   MAX-WIDTH: 575.98px
+   Mobile portrait: industry-solutions card sizing/typography scaled
+   down, product-catalog heading min-height removed.
+   ================================================================== */
 @media (max-width: 575.98px) {
    /* industry-solutions section start */
    .industry-solutions-area {
@@ -331,21 +428,53 @@
     /* product-catalog section end */
 }
 
-/* max-width 479 */
+/* ==================================================================
+   MAX-WIDTH: 479.98px
+   Small mobile: promo video and spec-quote image heights fixed for
+   narrow screens.
+   ================================================================== */
 @media (max-width: 479.98px) {
 
- 
+    /* placement section start */
+     .video-promo-wrapper video {
+        height: 161px;
+    }
+    .spec-quote-img-wrapper img {
+        display: block;
+        width: 100%;      
+        height: 173px;       
+        object-fit: cover;   
+        object-position: center;
+    }
+    /* placement section end */
+
 
 }
 
-/* max-width 383 */
+/* ==================================================================
+   MAX-WIDTH: 383.98px
+   Extra small mobile: spec-quote decorative line repositioning.
+   ================================================================== */
 @media (max-width: 383.98px) {
-
+    .spec-quote-line {
+        width: 120px;
+        left: 4vw;
+        bottom: 18px;
+    }
+    .spec-quote-line:nth-child(1){
+        right: 4vw;
+        top: 18px;
+    }
 }
-/* max-width 383 */
+
+/* ==================================================================
+   MAX-WIDTH: 360px
+   Smallest supported mobile: button sizing, industry-solutions card
+   view-btn/heading tweaks, footer shape offset.
+   ================================================================== */
 @media (max-width: 360px) {
     .us-btn-1 {
-        padding: 11.3px 28px;
+        padding: 11.3px 24px;
         font-size: 16px;
     }
     .industry-solutions-card .view-btn {
@@ -357,5 +486,9 @@
         font-size: 20.348px;
         margin: 14px 0;
     }
+    .footer-shape-2 {
+        right: -120px;
+    }
 
 }
+/* END OF RESPONSIVE.CSS */

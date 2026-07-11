@@ -1,19 +1,54 @@
 /*
-  The Name:Georgia Mechanical
+  The Name: Us Valve
   Author: 
   Support: 
-  Description: Georgia Mechanical
+  Description: Us Valve
   Version: 1.0
 */
 
-/* CSS Index
------------------------------------
-1.default css
------------------------------------
-*/
+/* ==================================================================
+   CSS INDEX
+   ------------------------------------------------------------------
+   1.  Font Face Declarations
+   2.  Font Utility Classes
+   3.  Base / Global Styles
+   4.  Lenis Smooth Scroll
+   5.  Custom Scrollbar (OverlayScrollbars)
+   6.  Animation Utilities
+   7.  Parallax Image Utilities
+   8.  Global Links
+   9.  Background Utilities
+   10. Container
+   11. Z-Index Utilities
+   12. Form Elements (inputs / textarea)
+   13. Heading Styles (h1 - h6)
+   14. Buttons
+   15. Border Radius Utilities
+   16. Header Section
+        16.1 Header Top / Main Menu
+        16.2 Header Offcanvas (mobile menu)
+   17. Banner Section
+   18. Value Props Section
+   19. Metrics Ribbon Section
+   20. Video Promo Section
+   21. Industry Solutions Section
+   22. Product Catalog Section
+   23. Spec Quote Section
+   24. Process Timeline Section
+   25. Resource Banner Section
+   26. Placement Section
+   27. Footer Section
+   ================================================================== */
+
+
+/* ==================================================================
+   1. FONT FACE DECLARATIONS
+   Acumin Pro (regular / medium / bold) and Acumin Pro Condensed
+   (medium / regular / bold) self-hosted webfonts.
+   ================================================================== */
 
 @font-face {
-    font-family: 'Acumin Pro';
+    font-family: "Acumin Pro";
     src: url('../fonts/AcuminPro-Regular.eot');
     src: url('../fonts/AcuminPro-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminPro-Regular.woff2') format('woff2'),
@@ -25,7 +60,7 @@
 }
 
 @font-face {
-    font-family: 'Acumin Pro';
+    font-family: "Acumin Pro";
     src: url('../fonts/AcuminPro-Medium.eot');
     src: url('../fonts/AcuminPro-Medium.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminPro-Medium.woff2') format('woff2'),
@@ -37,7 +72,7 @@
 }
 
 @font-face {
-    font-family: 'Acumin Pro';
+    font-family: "Acumin Pro";
     src: url('../fonts/AcuminPro-Bold.eot');
     src: url('../fonts/AcuminPro-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminPro-Bold.woff2') format('woff2'),
@@ -49,7 +84,7 @@
 }
 
 @font-face {
-    font-family: 'Acumin Pro Condensed';
+    font-family: "Acumin Pro Condensed";
     src: url('../fonts/AcuminProCond-Medium.eot');
     src: url('../fonts/AcuminProCond-Medium.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminProCond-Medium.woff2') format('woff2'),
@@ -61,7 +96,7 @@
 }
 
 @font-face {
-    font-family: 'Acumin Pro Condensed';
+    font-family: "Acumin Pro Condensed";
     src: url('../fonts/AcuminProCond-Regular.eot');
     src: url('../fonts/AcuminProCond-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminProCond-Regular.woff2') format('woff2'),
@@ -73,7 +108,7 @@
 }
 
 @font-face {
-    font-family: 'Acumin Pro Condensed';
+    font-family: "Acumin Pro Condensed";
     src: url('../fonts/AcuminProCond-Bold.eot');
     src: url('../fonts/AcuminProCond-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/AcuminProCond-Bold.woff2') format('woff2'),
@@ -84,12 +119,24 @@
     font-display: swap;
 }
 
+
+/* ==================================================================
+   2. FONT UTILITY CLASSES
+   Quick helper classes to force a specific font-family on an element.
+   ================================================================== */
+
 .tk-Acumin-pro{
     font-family: "Acumin Pro", sans-serif;
 }
 .tk-Acumin-condensed{
     font-family: "Acumin Pro Condensed",sans-serif;
 }
+
+
+/* ==================================================================
+   3. BASE / GLOBAL STYLES
+   Site-wide defaults for body copy and the main wrapper.
+   ================================================================== */
 
 body {
     font-size: 18px;
@@ -102,7 +149,12 @@ body {
 main{
     overflow: hidden;
 }
-/* lenis */
+
+/* ==================================================================
+   4. LENIS SMOOTH SCROLL
+   Required housekeeping styles for the Lenis smooth-scroll library.
+   ================================================================== */
+
 html.lenis,
 html.lenis body {
     height: auto;
@@ -120,40 +172,52 @@ html.lenis body {
     overflow: hidden;
 }
 
-/* lenis */
 
-/* scroll bar */
+/* ==================================================================
+   5. CUSTOM SCROLLBAR (OverlayScrollbars)
+   Brand-colored scrollbar handle, kept above all other content.
+   ================================================================== */
+
 .os-scrollbar-handle {
     background: #E31827;
 }
 body>.os-scrollbar {
     z-index: 999;
 }
-/* scroll bar */
+
 img {
     max-width: 100%;
     height: auto;
 }
-/* animation */
+
+/* ==================================================================
+   6. ANIMATION UTILITIES
+   Wrapper used to clip elements that animate/reveal via GSAP.
+   ================================================================== */
+
 .animation-line{
     overflow: hidden;
 }
-/* animation */
 
-/* paralax img */
-.trigger-parallax {
+/* ==================================================================
+   7. PARALLAX IMAGE UTILITIES
+   Trigger wrapper + oversized image used for scroll-based parallax.
+   ================================================================== */
+
+/* .trigger-parallax {
     overflow: hidden;
     position: relative;
 }
-
 .parallax-img {
     height: calc(100% + 120px);
     width: 100%;
     object-fit: cover;
     transform: translateY(0);
-}
+} */
+/* ==================================================================
+   8. GLOBAL LINKS
+   ================================================================== */
 
-/* paralax img */
 a {
     text-decoration: none;
     color: #000;
@@ -168,24 +232,39 @@ img {
     height: auto;
 }
 
+/* ==================================================================
+   9. BACKGROUND UTILITIES
+   ================================================================== */
+
 .bg-fix {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* container */
+/* ==================================================================
+   10. CONTAINER
+   ================================================================== */
+
 .container {
     max-width: 1424px;
 }
-/* z-index */
+
+/* ==================================================================
+   11. Z-INDEX UTILITIES
+   ================================================================== */
+
 .z-4 {
     z-index: 4 !important;
 }
 
-/* z-index */
 
-/* input */
+/* ==================================================================
+   12. FORM ELEMENTS (inputs / textarea)
+   Shared styling for all text-like inputs and the textarea, plus
+   their placeholder text and focus state.
+   ================================================================== */
+
 input[type="text"], 
 input[type="email"], 
 input[type="tel"], 
@@ -218,8 +297,6 @@ input:focus , textarea:focus{
     font-weight: 400;
     line-height: 1.5;
 }
-/* input */
-
 
 
 .animation-line p:last-child,
@@ -227,7 +304,12 @@ input:focus , textarea:focus{
     margin-bottom: 0;
 }
 
-/* heading  style*/
+/* ==================================================================
+   13. HEADING STYLES (h1 - h6)
+   Fluid type scale using clamp() so headings scale smoothly between
+   the min and max viewport widths.
+   ================================================================== */
+
 h1,
 h2,
 h3,
@@ -265,7 +347,11 @@ h6 {
 }
 
 
-/* button */
+/* ==================================================================
+   14. BUTTONS
+   Primary pill-shaped CTA button with an inverted hover state.
+   ================================================================== */
+
 .us-btn-1 {
     display: inline-block;
     color: #FFF;
@@ -286,16 +372,29 @@ h6 {
     background-color: #fff;
     color: #E31827;
 }
-/* button */
 
-/* border radius */
+/* ==================================================================
+   15. BORDER RADIUS UTILITIES
+   ================================================================== */
+
 .b-radius-24{
     border-radius: 24px;
 }
-/* border radius */
 
 
-/* header section start */
+/* ==================================================================
+   16. HEADER SECTION
+   Fixed header containing the logo, search, main navigation and the
+   mobile offcanvas menu.
+   ================================================================== */
+
+/* ---- 16.1 Header top / main menu ---- */
+
+.header-area {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
 .header-area::before{
     content: "";
     position: absolute;
@@ -347,6 +446,7 @@ h6 {
     background: linear-gradient(180deg, #081A2D 0%, #06121F 100%);
     z-index: 1;
 }
+.footer-inner-menu ul ,
 .offcanvas-bottom-btn ul ,
 .mobile-menu ,
 .main-menu-wrapper ul ,
@@ -380,7 +480,7 @@ h6 {
     display: inline-block;
     color: #FFF;
     font-family: "Acumin Pro", sans-serif;
-    font-size: clamp(14px, 1.8vw, 17px);
+    font-size: 17px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: clamp(0.4px, 0.1vw, 0.85px);
@@ -465,8 +565,13 @@ h6 {
     padding-left: clamp(10px, 1.5vw, 66px);
 }
 
+.header-fix {
+    width: 100%;
+    height: 107.5px;
+}
 
-/* header offcanvas start*/
+/* ---- 16.2 Header offcanvas (mobile menu) ---- */
+
 #offcanvasRight.offcanvas{
     background: -webkit-gradient(linear, left bottom, left top, from(#4E4E53), to(#37373B));
     background: -o-linear-gradient(bottom, #4E4E53 0%, #37373B 100%);
@@ -697,12 +802,14 @@ h6 {
 .main-menu-wrapper> .main-menu li.beverage-menu-items>.sub-menu {
     width: 414px;
 }
-/* header offcanvas end*/
-
-/* header section end */
 
 
-/* banner section start */
+/* ==================================================================
+   17. BANNER SECTION
+   Full-width hero with background video, skewed content panel and
+   decorative diagonal lines.
+   ================================================================== */
+
 .video-item {
     display: block;
     object-fit: cover;
@@ -714,7 +821,7 @@ h6 {
     width: 100%;
 }
 .us-banner-area {
-    padding: clamp(120px, 16vw, 219px) 0 clamp(24px, 4vw, 36px);
+    padding: clamp(120px, 16vw, 219px) 0 36px;
 }
 .us-banner-area  .container {
     max-width: 1420px;
@@ -759,30 +866,32 @@ h6 {
 .line {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 50%;
     display: inline-block;
-    width: 100%;
-    height: 60px;
+    width: calc(100% + 5000px);
+    height: 58.141px;
     background: transparent;
     border: 1.5px solid transparent;
     border-image: linear-gradient(to right, #C9C9C9 0%, #636363 100%) 1;
     transform: skewX(-26deg);
 }
-.line.line-one {
-    bottom: 104px;
-    transform: translateX(70.5%) skewX(-26deg);
+.line-one {
+    bottom: 68px;
+    transform: translateX(105.5%) skewX(-26deg);
 }
-.line.line-two {
-    bottom: 37px;
-    transform: translateX(80%) skewX(-26deg);
+.line-two {
+    bottom: 0px;
+    transform: translateX(107.9%) skewX(-26deg);
 }
-.line.line-three {
-    bottom: -30px;
-    transform: translateX(90.7%) skewX(-26deg);
+.line-three {
+    bottom: -69px;
+    transform: translateX(110.7%) skewX(-26deg);
 }
-/* banner section end */
 
-/* value-props section start */
+/* ==================================================================
+   18. VALUE PROPS SECTION
+   ================================================================== */
+
 .value-props-area {
     padding: clamp(36px, 6vw, 58px) 0 clamp(16px, 3vw, 21px);
 }
@@ -810,10 +919,11 @@ h6 {
 }
 
 
+/* ==================================================================
+   19. METRICS RIBBON SECTION
+   Dark banner with key stats/verified badges over a brand-blue bg.
+   ================================================================== */
 
-/* value-props section end */
-
-/* metrics-ribbon section start */
 .metrics-ribbon-area {
     background: #134060;
     padding: clamp(24px, 5vw, 40px) 0;
@@ -899,9 +1009,12 @@ h6 {
     left: auto;
     right: 0;
 }
-/* metrics-ribbon section end */
 
-/* video-promo- section start */
+/* ==================================================================
+   20. VIDEO PROMO SECTION
+   Inline promo video with a circular play button overlay.
+   ================================================================== */
+
 .video-promo-section {
     padding: clamp(24px, 5vw, 42px) 0;
 }
@@ -945,9 +1058,13 @@ h6 {
     object-fit: cover;
     display: block;
 }
-/* video-promo- section end */
 
-/* industry-solutions section start */
+/* ==================================================================
+   21. INDUSTRY SOLUTIONS SECTION
+   Hover-reveal cards: image zooms and description text/height
+   expands on hover via CSS transitions.
+   ================================================================== */
+
 .industry-solutions-area {
     background: linear-gradient(180deg, #134060 2.14%, #141428 100%);
     padding: 74px 0 156px;
@@ -967,7 +1084,6 @@ h6 {
     text-align: center;
     transition: all 0.3s linear;
 } 
-
 
 .industry-solutions-card .view-btn{
     border-bottom: 1px solid #E31827;
@@ -1072,9 +1188,13 @@ h6 {
     left: 26px;
 }
 
-/* industry-solutions section end */
 
-/* product-catalog section start */
+/* ==================================================================
+   22. PRODUCT CATALOG SECTION
+   Skewed red section title ("stripe") treatment plus product cards
+   with a soft drop-shadow that lifts on hover.
+   ================================================================== */
+
 .product-catalog-section {
     margin-top: -71px;
     padding-bottom: 66px;
@@ -1165,9 +1285,10 @@ h6 {
     right: 92%;
     border-image: linear-gradient(to left, #C9C9C9 0%, #636363 100%) 1;
 }
+.product-catalog-card-img-info {
+    min-height: 300px;
+}
 .product-catalog-card-img-wrapper img {
-    width: 248px;
-    height: 248px;
     transition: all 0.3s ease;
 }
 .product-img-shadow {
@@ -1234,10 +1355,10 @@ h6 {
     max-width: clamp(70px, 12vw, 125px);
 }
 
+/* ==================================================================
+   23. SPEC QUOTE SECTION
+   ================================================================== */
 
-/* product-catalog section end */
-
-/* spec-quote section start */
 .spec-quote-section {
     padding-top: 67px;
 }
@@ -1247,16 +1368,29 @@ h6 {
 .spec-quote-section .row {
     --bs-gutter-x: clamp(32px, 8vw, 126px);
 }
-.spec-quote-img-wrapper {
-    border: 1px solid #A4A4A4;
-    border-radius: 16px;
-    overflow: hidden;
+.spec-quote-line {
+    display: inline-block;
+    background: #E31827;
+    width: 134px;
+    height: 4px;
+    position: absolute;
+    bottom: 29px;
+    left: 118px;
+    z-index: 1;
+}
+.spec-quote-line:nth-child(1) {
+    left: auto;
+    bottom: auto;
+    right: 131px;
+    top: 35px;
 }
 
-/* spec-quote section end */
 
+/* ==================================================================
+   24. PROCESS TIMELINE SECTION
+   Numbered step markers connected by a horizontal brand-red line.
+   ================================================================== */
 
-/* process-timeline section start */
 .process-timeline-section {
     padding: 33px 0 78px;
 }
@@ -1321,10 +1455,12 @@ h6 {
 .process-timeline-title-wrapper {
     margin-top: 40px;
 }
-/* process-timeline section end */
 
 
-/* resource-banner section start */
+/* ==================================================================
+   25. RESOURCE BANNER SECTION
+   ================================================================== */
+
 .resource-banner-area {
     background: #134060;
     padding: 30px 0;
@@ -1337,9 +1473,13 @@ h6 {
     max-width: 700px;
 }
 
-/* resource-banner section end */
 
-/* placement section start */
+/* ==================================================================
+   26. PLACEMENT SECTION
+   Location search field plus a 3-column card grid with vertical
+   divider rules and skewed decorative background lines.
+   ================================================================== */
+
 .placement-area {
     padding-top: 50px;
 }
@@ -1430,7 +1570,7 @@ h6 {
     margin-bottom: 44px;
 }
 .placement-line {
-    background: linear-gradient(90deg, rgba(19, 64, 96, 0.10) 0%, rgba(19, 64, 96, 0.20) 100%);
+    background: linear-gradient(90deg, rgba(19, 64, 96, 0.20) 0%,  rgba(19, 64, 96, 0.10) 100%);
     display: inline-block;
     height: 18px;
     width: calc(100% + 5000px);
@@ -1461,6 +1601,7 @@ h6 {
     right: 50%;
     transform: translateX(50%) skewX(-26deg);
     margin-right: -3936px;
+    background: linear-gradient(90deg, rgba(19, 64, 96, 0.10) 0%, rgba(19, 64, 96, 0.20) 100%);
 }
 .placement-line-wrapper.right-side .placement-line:nth-child(2){
     margin-right: -3962px;
@@ -1469,25 +1610,35 @@ h6 {
     margin-right: -3988px;
 }
 
-/* placement section end */
 
-/* footer section start */
+/* ==================================================================
+   27. FOOTER SECTION
+   Dark footer with logo, menu columns, contact info and the
+   copyright bar.
+   ================================================================== */
+
 .footer-area {
     background: linear-gradient(180deg, #081A2D 0%, #010A14 100%);
     border-top: 4px solid #E03643;
     padding: 50px 0 10px;
 }
 .footer-logo img {
-    max-width: 203px;
+    max-width: clamp(148px, 20vw, 203px);
 }
+.footer-shape-2  ,
 .footer-shape {
     position: absolute;
-    top: 50px;
+    top: 0;
     z-index: -1;
-    width: calc(100% - 243px);
-    right: 0;
+    width: 100%;
+    right: -256px;
+    min-height: 44px;
 }
-
+.footer-shape-2 {
+    right: -65px;
+    max-width: 256px;
+    min-height: auto;
+}
 .footer-title {
     color: #FF2737;
     font-family: "Acumin Pro Condensed" , sans-serif;
@@ -1495,8 +1646,8 @@ h6 {
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 1.6px;
-    margin: 0;
     padding-bottom: 12px;
+    margin-bottom: 10px;
 }
 .footer-title::before{
     content: "";
@@ -1527,14 +1678,71 @@ h6 {
     color: #FBFDFF;
     font-weight: 600;
     display: block;
+    transition: all 0.3s ease;
+}
+.footer-item a:hover{
+    color: #E31827;
 }
 .contact-link {
     text-decoration: underline;
 }
-.footer-item{
+.footer-item {
     margin-bottom: 22px;
+    max-width: 255px;
 }
 .footer-item:last-child{
     margin-bottom: 0;
 }
-/* footer section end */
+.footer-inner-menu ul li a {
+    color: #FFF;
+    font-family: "Acumin Pro Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.other-link-wrapper a ,
+.social-link,
+.footer-inner-menu ul li a{
+    transition: all 0.3s linear;
+}
+.social-link:hover{
+   opacity: 0.7;
+}
+.other-link-wrapper a:hover ,
+.footer-inner-menu ul li a:hover{
+    color: #E31827;
+}
+.footer-inner-menu-wrapper {
+    gap: clamp(32px, 6vw, 100px);
+}
+
+.footer-top-area {
+    margin-top: 42px;
+    margin-bottom: 50px;
+}
+.footer-top-area .row {
+    --bs-gutter-x: 47px;
+    --bs-gutter-y: 35px;
+}
+.footer-menu-area {
+    min-width: 255px;
+}
+.footer-top-area .col:nth-child(1) .footer-menu-area{
+    min-width: 429px;
+}
+.footer-inner-menu ul li {
+    margin-bottom: 12px;
+}
+.footer-inner-menu ul li:last-child{
+    margin-bottom: 0;
+}
+.other-link-wrapper a ,
+.copy-right-text {
+    color: #5D76A1;
+    font-family: "Acumin Pro Condensed",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 1.12px;
+}
+/* END OF MAIN.CSS */
