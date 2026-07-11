@@ -1211,8 +1211,9 @@ h6 {
     border-image: linear-gradient(to left, #C9C9C9 0%, #636363 100%) 1;
 }
 .product-catalog-card-img-info {
-    min-height: 300px;
+    min-height: clamp(180px, 35vw, 300px);
 }
+
 .product-catalog-card-img-wrapper img {
     transition: all 0.3s ease;
 }

@@ -33,7 +33,15 @@
 @media (max-width: 1500px) {
    
 }
-
+@media (min-width: 992px) and (max-width: 1500px) {
+    .placement-card  .us-btn-1,
+    .process-timeline-title-wrapper .us-btn-1,
+    .product-catalog-card-content .us-btn-1 {
+        padding: 11.3px 14px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+}
 /* ==================================================================
    MAX-WIDTH: 1399.98px
    Large desktop / small laptop: tighten resource banner width,
@@ -186,6 +194,10 @@
     }
     .video-item {
         position: relative;
+    }
+    .search-icon svg {
+        height: 20px;
+        width: 20px;
     }
     /* header section end */
 
@@ -353,6 +365,8 @@
         margin-left: -20px;
     }
     /* placement section end */
+
+
 }
 
 /* ==================================================================
@@ -409,16 +423,16 @@
     }
     .industry-solutions-card-content {
         height: 77px;
-        padding: 10px 100px 15px 15px;
+        padding: 10px 95px 15px 15px;
     }
     .industry-solutions-card img{
         min-height: 190px;
     }
     .industry-solutions-card-content p {
-        font-size: 12px;
+        font-size: 14px;
     }
     .industry-solutions-card:hover .industry-solutions-card-content {
-        height: 140px;
+        height: 160px;
     }
    /* industry-solutions section end */
 
@@ -488,6 +502,9 @@
     }
     .footer-shape-2 {
         right: -120px;
+    }
+    .industry-solutions-card-content p {
+        font-size: 12px;
     }
 
 }
