@@ -1507,4 +1507,34 @@ h6 {
     height: 1px;
     background-color: #1B6EA8;
 }
+.footer-item h6 {
+    color: #2CA7FF;
+    font-family: "Acumin Pro",sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.footer-item p {
+    color: #FFF;
+    font-size: 14px;
+    font-style: italic;
+}
+.footer-item address a {
+    color: #FBFDFF;
+    font-weight: 275;
+}
+.footer-item a {
+    color: #FBFDFF;
+    font-weight: 600;
+    display: block;
+}
+.contact-link {
+    text-decoration: underline;
+}
+.footer-item{
+    margin-bottom: 22px;
+}
+.footer-item:last-child{
+    margin-bottom: 0;
+}
 /* footer section end */
